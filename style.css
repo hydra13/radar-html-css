@@ -1,0 +1,78 @@
+body {
+    background-color: #555;
+    color: lightgreen
+}
+
+.radar {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border: 2px solid lime;
+    border-radius: 50%;
+    position: relative;
+}
+
+@keyframes spinline {
+    0%      { transform: rotate(0deg); }
+    100%    { transform: rotate(360deg); }
+  }
+
+@keyframes fadeInOut1 {
+    0% { opacity: 0; }
+    83% { opacity: 0; }
+    88% { opacity: 1; }
+    100%   { opacity: 0; }
+}
+
+@keyframes fadeInOut2 {
+    0% { opacity: 0; }
+    45% { opacity: 0; }
+    50% { opacity: 1; }
+    62% { opacity: 0; }
+    100%   { opacity: 0; }
+}
+
+@keyframes fadeInOut3 {
+    0% { opacity: 0; }
+    37% { opacity: 0; }
+    42% { opacity: 1; }
+    54% { opacity: 0; }
+    100%   { opacity: 0; }
+}
+
+.line {
+    background-color: lime;
+    width: 2px;
+    height: 150px;
+    position: absolute;
+    left: 150px;
+    top: 0px;
+    transform-origin: left bottom;
+    animation:spinline 4s linear infinite;
+}
+
+.obj {
+    background-color: lime;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.obj1 {
+    top: 120px;
+    left: 100px;
+    animation:fadeInOut1 4s linear infinite;
+}
+
+.obj2 {
+    top: 230px;
+    left: 170px;
+    animation:fadeInOut2 4s linear infinite;
+}
+
+.obj3 {
+    top: 200px;
+    left: 200px;
+    animation:fadeInOut3 4s linear infinite;
+}
